@@ -46,7 +46,9 @@ function increment_Function() {
 }
 //increments X = 5 by 1 and displays in corresponding P element
 
-
+function i_see_pie() {
+    document.getElementById("apple").innerHTML = Math.PI;
+}
 window.alert(Math.random() * (100))
 //generates a pop up with a random number from 1 to 100
 
