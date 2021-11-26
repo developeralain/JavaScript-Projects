@@ -19,3 +19,9 @@ function My_Second_Function() {
     //This modifies the element with id 'kek' to have the value
     //of the 'sentence' variable, which is a string,  upon an event occurring as defined by the HTML document
 }
+
+function clickclack() {
+    var sentence = "LOL "
+    sentence += "ERSKATES"
+    document.getElementById("lol").innerHTML = sentence;
+}
