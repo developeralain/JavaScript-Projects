@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script src="./JS/main.js"></script>
+    <!--Links the corresponing javascript document to this HTML document-->
+</head>
+
+<body>
+<!--each of the below p elements contains the output of a corresponding javascript function. The id attribute for each matches a corresponding function's 'getElementById' value. Utilizing html elements as 'output fields' for javascript is one way to view the output of a javascript function-->
+<p>Riders must be at least 52 centimeters tall to ride.</p>
+<input id="height" value="52" />
+<button onclick="ride_function()">Click Here</button>
+<p id="ride"></p>
+
+<p>Voters must be at least 18 years of age to vote.</p>
+<input id="age" value="18" />
+<button onclick="vote_function()">Click Here</button>
+<p id="vote"></p>
+
+
+<button onclick="myfunction()">Click Here</button>
+<p id="keywords_and_constructors"></p>
+
+<button onclick="myalainfunction()">Click here</button>
+<p id="new_and_this"></p>
+
+<button onclick="burrito_function()">Click here</button>
+<p id="burrito"></p>
+
+<p id="nested_function" onclick="generic_function()">CLICKITH</p>
+
+</body>
+
+</html>
