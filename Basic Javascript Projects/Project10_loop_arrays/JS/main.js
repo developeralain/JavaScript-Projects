@@ -123,12 +123,12 @@ function break_loop() {
     for (let i = 1; i < 11; i++) {
         if (i === 6) { break; }
         text += "The number is " + i + "<br>";
-
+//Defines a standard loop with the addition of a 'break condition (if i===6) and the 'break' keyword (which exits the loops upon reaching the condition)
     }
     document.getElementById("break").innerHTML = text;
 }
 break_loop(); 
-
+//The above loop is defined to count from 1 to 10, but due to the 'break' keyword it will stop counting at 5 (exits loop when it detects i had incremented to 6). Expected output: 1,2,3,4,5
 
 //CONTINUE CHALLENGE
 function continue_loop() {
@@ -136,9 +136,9 @@ function continue_loop() {
     for (let i = 1; i < 11; i++) {
         if (i === 6) { continue; }
         text += "The number is " + i + "<br>";
-
+//Defines a standard loop with the addition of a 'condtinue condition (if i===6) and the 'continue' keyword (which skips counting the number 6 (when i=6) and continues counting to 10 after skipping 6)
     }
     document.getElementById("continue").innerHTML = text;
 }
 continue_loop();
-
+//The above loop is defined to count from 1 to 10, but due to the 'continue' keyword it will skip counting the number 6 (when i = 6) and continue counting to 10 after skipping 6. Expected output: 1,2,3,4,5,7,8,9,10
