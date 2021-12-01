@@ -84,7 +84,7 @@ function let_function() {
     console.log(X);
 }
 let_function();
-//The above demonstrated that the 'let' keyword allows for a variable of a given name (in this case 'X') to mean something else within a code block (locak to a block) delineated by {} than what it means when local to a function. var X = 21 was local to the function and printed as such, whereas let X = 22 was written within curly brackets (code block) and was local to the confines of that particular block - hence it printed X = 22 as specified rather than X = 21 as was specified to the function as a whole.
+//The above demonstrated that the 'let' keyword allows for a variable of a given name (in this case 'X') to mean something else within a code block (local to a block) delineated by {} than what it means when local to a function. var X = 21 was local to the function and printed as such, whereas let X = 22 was written within curly brackets (code block) and was local to the confines of that particular block - hence it printed X = 22 as specified rather than X = 21 as was specified to the function as a whole.
 
 //RETURN FUNCTION 
 function return_function(height, width) {
@@ -101,8 +101,8 @@ console.log(return_function(3, 2));
 console.log(return_function(22, 2));
 //the above console.log methods are used to display the results of return_function in the browser console while allowing for arguments to be entered into the above called function. As we can see, the if statement works and if the conditional is not met, zero is returned as specified. 
 
-//OBJECT USING LET KEYWORK AND THIS KEYWORD 
-var wow_toon = {
+//OBJECT USING LET KEYWORD AND THIS KEYWORD 
+let wow_toon = {
     race: "human ",
     level: "60 ",
     class: "rogue ",
