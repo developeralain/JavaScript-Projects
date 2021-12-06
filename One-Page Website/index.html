@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Witcher | Beasts, Monsters, and Magic</title>
+        <link rel="stylesheet" type="text/css" href="css/one_page_website.css">
+        <script src="./js/one_page_website.js" defer></script>
+    </head>
+    <body>
+
+        <!--NAV-->
+        <div>
+            <div>
+                <ul>
+                    <a href="#home" id="link"><li>HOME</li></a>
+                    <a href="#gallery"><li>GALLERY</li>
+                    <a href="#contact"><li>SIGN UP FOR AN EPIC BATTLE OF MYTH AND MAGIC</li></a>
+                </ul>
+            </div>
+        </div>
+        <!--END NAV-->
+
+        <!--HOME-->
+        <div id="home">
+            <div>
+                <div>
+                    <span>Beasts, Monsters, and Magic of The Witcher Universe</span>
+                </div>
+            </div>
+        </div>
+        <!--END HOME-->
+
+        <!--GALLERY-->
+        <!--lightbox (slideshow+modal combined)-->
+        <!--Images used to open to Lightbox-->
+        <div class="row">
+            <div class="column">
+                <img src="./images/Thumb/thumbnail_1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/Thumb/thumbnail_2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/Thumb/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/Thumb/thumbnail_4.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+
+        </div>
+
+        <!--The Modal/Lightbox-->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="./images/Thumb/thumbnail_1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="./images/Thumb/thumbnail_2.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="./images/Thumb/thumbnail_3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="./images/Thumb/thumbnail_4.png" style="width:100%">
+                </div>
+                <!--NExt/previous controls-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+                <!--Caption Text-->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="column">
+                    <img class="demo cursor" src="./images/Thumb/thumbnail_1.png" style="width:100%" onclick="currentSlide(1)" alt="Monster 1">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/Thumb/thumbnail_2.png" style="width:100%" onclick="currentSlide(2)" alt="Monster 2">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/Thumb/thumbnail_3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Monster 3">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/Thumb/thumbnail_4.png" style="width:100%" onclick="currentSlide(4)" alt="Monster 4">
+                </div>
+            </div>
+        </div>
+
+
+        <!--RSVP-->
+        <section>
+            <div id="contact">
+                <div>
+                    <h1>Reservations</h1>
+                    <div>
+                        <h2><span>The battle of your lifetime is just a dragon span away.</span>
+                            <br  />Reserve your monster match today!
+                        </h2>
+                        <p>
+                            Please provide us with your basic contact information, including the nearest Nilfguard
+                            outpost to you
+                        </p>
+                        <div>
+                            <form action="" method="post">
+                                <input class="rsvp" type="text" value="First Name">
+                                <input class="rsvp" type="text" value="Last Name">
+                                <input class="rsvp" type="text" value="Nifguardian Hut Index">
+                                <input class="rsvp" type="text" value="Proximal Outpost Identifier">
+                                <div class="form-spacer">
+                                    <label class="terms">Terms and Conditions</label>
+                                </div>
+                                <div>
+                                    <input type="submit" value="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END RSVP-->
+
+        <!--FOOTER-->
+        <div>
+            www.thewitcherawaitsyourchallenge.nilfguard &nbsp;\&nbsp; &copy; 2021
+        </div>
+        END FOOTER
+    </body>
+
+</html>
