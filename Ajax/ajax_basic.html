@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+		<script type="text/javascript">
+			   
+            //step 1 : set up the XML HTTP REQUEST OBJECT (set up and call from AJAX class object; instantiated class)
+            var ajax = new XMLHttpRequest(); //instantiating this object allows us to use 'ajax' variable 
+            //instead of typing entire thing each time ... this object tells browser we are dealing with AJAX ... the 'ajax' variable contains the XML HTTP REQUEST OBJECT INSTANCE
+
+            //Step 2: prepare the OPEN AJAX REQUEST (instruct browser on how to handle data - sending data)
+            ajax.open('get', 'content.html'); //this 'open' method has 2 parameters: the HTTP Verb/Request Method(GET,PUT,POST) and the URL (in this case we are requesting as we use 'GET' verb/method) ... it provides info on how to send data to server
+
+            //Step 3: DEFINE THE AJAX RESPONSE CALLBACK METHOD (instruct what to do when data received from server)
+            //this tells the browser what to do once it receives a response back from the server 
+            //AJAX has different Request State/Ready State changes that its watching for. Here in step 3 we are concerned with Request/Ready State 4: The request is complete. We want to make sure there are no errors and we received the data back/response back and are waiting on callback to do something with it.
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState == 4) { //we only want this code to be executed IF the request was successfully completed ... there are several readyStates available which represent different things.
+                    document.getElementById("content").innerHTML = ajax.responseText; // returns response data as a string
+
+                }
+            }
+
+            //Step 4: send the AJAX REQUEST FOR DATA (trigger or event that DOM will watch for in order to initiate our send)
+            function getContent() {
+                ajax.send(); //sends request for content when button is clicked on HTML page
+                document.getElementById("btn_content").style.display = "none"; // hides the button itself after it is clicked so only the requested content is displayed and not the button
+
+            }
+
+
+
+
+		</script>
+    </body>
+</html>
