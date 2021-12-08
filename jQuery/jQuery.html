@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--links to a JQuery API to allow the below JQuery synatax to make calls to the API and run the corresponding JavaScript code-->
+    </head>
+
+    <script>
+        $(document).ready(function() {//target document object of DOM and run the 'ready' function which carries out events (as defined by the coder below) as soon as the DOM of the page is ready (page loaded)
+            $("html").append(//append attaches HTML to the document depending on your target...used to create HTML content for the document.
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic JQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                            <button id='alert'>Click me</button>\
+                        </div>\
+                    </div>\
+                </body>"
+            
+
+            );
+            $("#2").css({color: "red"});//targets p2 and applies CSS to make it red
+            $("#3").click(function() {//a method where a function runs based on a click event (clicking p3)
+                $("h1").hide()//h1 will be hidden after p3 is clicked
+
+            });
+            $("#alert").click(function() {//click event method targeting the button
+                console.log("A button with the alert class was clicked!");//when button is clicked a string will display in the console
+            });
+            $("#1").slideUp(800);//targets p1 and makes it vanish via a slideUp effect over 0.8 seconds
+            $("#1").toggle(2000);//makes p1 reappear over 2 seconds
+        });
+                
+           
+    </script>
+</html>
