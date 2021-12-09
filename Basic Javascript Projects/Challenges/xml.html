@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="XML_Example"></p>
+  <script>
+    var XML_Parser, XML_Document;
+
+    //creates a text string
+    var Dogs = "<dogs>" + "<dog>" + "<name>Lacie</name>" + "<breed>Mini Aussie</breed>" + "<age>2 years</age>" + "<likes>Chew Toys</likes>" + "</dog>" + "</dogs>";
+
+    //creates an XML DOM Parser
+    XML_Parser = new DOMParser();
+
+    //creates a new XML DOM Object using the text string
+    XML_Document = XML_Parser.parseFromString(Dogs,"text/xml");
+
+    document.getElementById('XML_Example').innerHTML = XML_Document.getElementsByTagName("breed")[0].childNodes[0].nodeValue;
+
+
+    </script>
+    </body>

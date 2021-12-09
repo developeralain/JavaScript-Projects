@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+  </head>
+  <!-- //This is a counter that counts up as soon as page is loaded.
+  //This code works with React v14.3 -->
+  <body>
+
+    <div id="My_React_Code"></div>
+    <script>
+
+      var Counter = React.createClass({//creates component classes
+        render: function() {
+          var time_Passed = Math.round(this.props.time_Passed / 100);
+          var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0');
+          var text = 'My React code started running ' + seconds_Passed  + ' seconds ago!';
+          return React.DOM.p(null, text);
+
+        }
+      });
+
+      var counter_Factory = React.createFactory(Counter);//generates a factory (object that creates objects) with parameter 'Counter'
+
+      var start_Counting = new Date().getTime();
+      setInterval(function()    {//a method that evaluates an expression at specified intervals (miliseconds)
+        ReactDOM.render(//usedto render a React Component or Components
+        counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+        document.getElementById('My_React_Code')
+      );
+    },   50);
+
+    //the above React code creates a timer that counts upward.
+    //It is written with JavaScript using pre-made React code, with a few React-specific syntax elements (like React.DOM.p and React.createClass, among others)
+
+
+    </script>
+
+
+  </body>
+</html>
