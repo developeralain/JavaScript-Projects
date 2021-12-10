@@ -38,4 +38,10 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+//CLEAN FADE IN EFFECT FOR WEBPAGES COMPONENT
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('fade-out');
+});//this code pertains to the fade-out effect. What it does is listens for when the DOM is fully loaded (page is loaded) and once that occurs it then proceeds to remove the css class (body.fade-out) responsible for making the page invisible by default. 
+
+// END CLEAN FADE IN EFFECT COMPONENT
 

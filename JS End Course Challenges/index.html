@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Witcher | Beasts, Monsters, and Magic</title>
+        <script src="./js/code.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--links to a JQuery API to allow the below JQuery synatax to make calls to the API and run the corresponding JavaScript code-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+        <!-- The below JS code creates a CSS class to the body called 'fade' that corresponds to the CSS stylesheet body.fade selector -->
+            <script>
+              document.body.classList.add('fade');
+            </script>
+            <!-- ... -->
+          
+          <!-- The below JS code removes the body.fade class from the DOM, thereby canceling out the effect of the CSS with the body.fade selector and allowing the body selector's CSS to take effect and create the transition into 1 opacity over 0.7s -->
+              <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.setTimeout(function() {
+        document.body.classList.remove('fade');
+      }, 230);
+    });
+  </script>
+  <!--  -->
+  <script >
+  // This is jQuery code pertaining to the SLIDESHOW of puppies at the bottom of the page
+
+  jQuery(document).ready(function($) {  
+  $("#slideshow > div:gt(0)").hide();
+  //the above bit of code ensures the DOM is fully loaded prior to starting the slideshow program as otherwise it can get buggy / weird looking
+  
+  setInterval(function() { 
+  $('#slideshow > div:first')
+  .fadeOut(1000)
+  .next()
+  .fadeIn(1000)
+  .end()
+  .appendTo('#slideshow');
+  }, 3000);
+});
+  // END SLIDESHOW CODE
+  </script>
+  
+          
+
+        <!--NAV-->
+        <div>
+            <div>
+                <ul>
+                    <a href="#home" id="link"><li>HOME</li></a>
+                    <a href="#gallery"><li>GALLERY</li>
+                    <a href="#contact"><li>SIGN UP FOR AN EPIC BATTLE OF MYTH AND MAGIC</li></a>
+                </ul>
+            </div>
+        </div>
+        <!--END NAV-->
+
+        <!--HOME-->
+        <div id="home">
+            <div>
+                <div>
+                    <span>Beasts, Monsters, and Magic of The Witcher Universe</span>
+                </div>
+            </div>
+        </div>
+        <!--END HOME-->
+
+        <a href="#werecat">Click to see the Were Cat!</a>"
+
+        <!--GALLERY-->
+        <section>
+            <div id="gallery">
+                <h1>Gallery</h1>
+                <div> <!--this <div> denotes the entire gallery - ALL THE IMAGES AS A WHOLE-->
+
+                    <!--PHOTO-CONTAINER 1-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img  id="ghoul" src="./images/thumb/thumbnail_1.png" alt="Ghoul">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 2-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img id="werewolf" src="./images/thumb/thumbnail_2.png" alt="Werewolf">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 3-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img id="werecat" src="./images/thumb/thumbnail_3.jpg" alt="Werecat">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 4-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img src="./images/thumb/thumbnail_4.png" alt="Wererat">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 5-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img src="./images/thumb/thumbnail_5.png" alt="Drowner">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 6-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img src="./images/thumb/thumbnail_6.png" alt="Gargoyle">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 7-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img src="./images/thumb/thumbnail_7.jpg" alt="High Vampire">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 8-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img src="./images/thumb/thumbnail_8.png" alt="Wraith">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                    <!--PHOTO-CONTAINER 9-->
+                    <div> <!--this <div> denotes the actual 'image package' and will have the image border-->
+                        <div> <!--this <div> will have our image-->
+                            <img src="./images/thumb/thumbnail_9.png" alt="Wyvern">
+                            <div> <!--this <div> is the image overlay-->
+                                <h3>Click to Enlarge</h3>
+                                <p>We have several creatures of myth and magic ready to fight daily, select your match today!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END PHOTO CONTAINER-->
+
+                </div>
+            </div>
+        </section>
+        <!--END GALLERY-->
+
+        <h3>Now it's time to take a little break from scary monsters and enjoy some puppy love!</h3>
+        <div id="slideshow">
+            <div>
+              <img src="./images/img/dame_1.jpg">
+            </div>
+            <div>
+              <img src="./images/img/sire_1.jpg">
+            </div>
+            <div>
+              <img src="./images/img/dame_3.jpg">
+            </div>
+          </div>
+
+        <!--RSVP-->
+        <section>
+            <div id="contact">
+                <div>
+                    <h1>Reservations</h1>
+                    <div>
+                        <h2><span>The battle of your lifetime is just a dragon span away.</span>
+                            <br  />Reserve your monster match today!
+                        </h2>
+                        <p>
+                            Please provide us with your basic contact information, including the nearest Nilfguard
+                            outpost to you
+                        </p>
+
+                        <button class="open-button" onclick="openForm()">Open Form</button>
+
+                        <div class="form-popup" id="thisForm">
+                            <form class="form-container" name="myForm" action="" onsubmit="return validateForm()" method="post" required>
+                                <h1>User Information</h1>
+
+                                <label for="firstname"><b>First Name</b></label>
+                                <input id="fname" class="rsvp" name="fname" type="text" placeholder="First Name">
+                                
+                                <label for="lastname"><b>Last Name</b></label>
+                                <input id="lname" class="rsvp" name="lname" type="text" placeholder="Last Name">
+
+                                <label for="phone"><b>Phone Number</b></label>
+                                <input id="phone" class="rsvp" name="phone" type="tel" value="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                              placeholder="416-202-4141">
+                              
+                              <button type="submit" class="btn">Submit</button>
+                              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+                                </div>
+                            </form>
+
+                            <div class="form-spacer">
+                                <label class="terms">Terms and Conditions</label>
+                            </div>
+                            <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END RSVP-->
+
+        <!--FOOTER-->
+        <div>
+            www.thewitcherawaitsyourchallenge.nilfguard &nbsp;\&nbsp; &copy; 2021
+        </div>
+        <!--END FOOTER-->
+     
+    </body>
+
+</html>

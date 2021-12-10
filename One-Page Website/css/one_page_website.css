@@ -1,3 +1,14 @@
+body {
+  font-size: 1.5vw;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
 img {
     height:500px;
     width: auto;

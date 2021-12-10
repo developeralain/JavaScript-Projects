@@ -1,0 +1,26 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  </head>
+  <body>
+
+    <div id="JSX"></div>
+
+    <script type="text/babel">
+class Greeting extends React.Component {//React.Component specifies class or function
+  render() {//render creates a function
+    return <h1>This is me trying out JSX</h1>//return returns information
+  }
+}
+
+ReactDOM.render(<Greeting />, document.getElementById('JSX'))
+      </script>
+
+  </body>
+</html>

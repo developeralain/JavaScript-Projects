@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box; 
+    max-width: 100%;
+   
+    ;}
+
+    button.sticky {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        right: 50%;
+        bottom:0;
+      }
+  
+
+
+
+  p {
+    word-wrap: break-word;
+  }
